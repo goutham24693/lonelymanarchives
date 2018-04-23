@@ -1,0 +1,32 @@
+---
+layout: post 
+---
+<style type="text/css">
+.bottom-nav-next { /* Bottom Navigation to next page */
+    display:inline-block;
+    float: right;
+}
+
+.bottom-nav-prev { /* Bottom Navigation to prev page */
+        display:inline-block;
+        float: left;
+}
+
+</style>
+{{ content }}
+<br><div>
+        {% if page.previous %} 
+                <div class="bottom-nav-prev">
+                         <h4><a href="{{ page.previous.url | prepend:site.baseurl }}">
+                                 << Previous: {{ page.previous.title }}
+                        </a></h4>
+                    </div>
+        {% endif %}
+        {% if page.next %} 
+                    <div class="bottom-nav-next">
+                       <h4><a href="{{ page.next.url | prepend:site.baseurl }}">
+                               Next: {{ page.next.title }} >> 
+                            </a></h4>
+                    </div> 
+        {% endif %}
+</div> 

@@ -1,0 +1,38 @@
+---
+layout: post-wrapper
+title:  "Introduction to PKI"
+date:   2018-04-13 23:24:40 +0530
+categories: jekyll update
+---
+
+<h3>What is a PKI?</h3>
+<p>
+<em>A Public Key Infrastructure</em> (PKI) is a set up required to provide secure communication over unsecure network. PKI provides a platform to create, manage, use, store, and revoke digital certificates and manage public-key encryption. In cryptography, a PKI is an arrangement that binds public keys with respective identities of entities (like people and organizations).</p>
+
+<h3>Digital Certificates:</h3>
+<p>
+A <em>Digital Certificate</em> or a X.509 certificate, is an electronic document used to prove the ownership of a public key. It contains information like  hostname, organization, country etc.  A trusted Certificate has a validity, after the expiration date the certificate is no longer trusted.
+</p>
+
+<h3>Digital Signing:</h3>
+<p>
+Digital Signing exhibits the property of <em>non-repudiation</em>. Digital Signing can be considered as an "Electronic Fingerprint", that associates actions or changes to a unique individual. Using Digital Signing origin of data and integrity can be verified. In a PKI, a <em>Certificate Authority</em> signs Certificate i.e CA leaves its digital fingerprint on the certificate. This digital signature is then used to identify the signed Certificate.
+</p>
+
+<h3>Certificate Authority:</h3>
+<p>
+In PKI, a <em>Certification Authority</em> (CA) is an entity that digitally signs certificates. On issuing, CA includes its digital signature to the Certificate, this signature is then used to trust the owner of the certificate. A CA can also revoke a trusted certificate, meaning after revocation a certificate is no longer trusted. Certificate Revocation List (CRL) is the list of certificate that has been revoked. 
+</p>
+
+<h3>Certificate Signing Request</h3>
+<p>
+A <em>Certificate Signing Request</em> (CSR) is a request message sent by the an applicant (like organization) to the Certificate Authority to apply for a digitally signed Certificate. CSR contains a public key and distinguished name (like Country, Locality, State). In X.509 system, an organization that wants a signed certificate requests one via a certificate signing request (CSR). Using the CSR, a entity called CA provides the organization a signed Certificate.
+</p>
+
+The below posts covers setting up a PKI using openssl library, 
+
+* [Creating a Root CA]({{ site.baseurl }}{% link _posts/openssl/2018-04-14-create-root-ca.markdown %})
+* [Creating Subordinate CA]({{ site.baseurl }}{% link _posts/openssl/2018-04-18-create-sub-ca.markdown %})
+* [Issuing Certificates]({{ site.baseurl }}{% link _posts/openssl/2018-04-21-signing-client-certificate.markdown %})
+
+
