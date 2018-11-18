@@ -4,12 +4,14 @@ title:  "My vimrc file"
 date:   2018-11-18 13:00:40 +0530
 categories: jekyll update
 ---
+<p>
 <pre>
 set syntax=on
 set shiftwidth=4
 set tabstop=4
 set smartindent
-"map <F5> :set tags=/home/UT/HA/code/tags
+
+"map <F5> :set tags=/home/goutham/code/tags
 set showcmd " show the command being typed
 set showmatch " show matching brackets
 set laststatus=2 " always show the status line
@@ -31,6 +33,7 @@ filetype on                   " Enable filetype detection
 filetype indent on            " Enable filetype-specific indenting
 filetype plugin on            " Enable filetype-specific plugins
 colorscheme evening
+
 "  searching
 set incsearch                 " incremental search
 set hlsearch                  " highlight the search
@@ -55,4 +58,4 @@ vmap <C-v> c<ESC>"+p
 imap <C-v> <ESC>"+pa
 vmap <S-Insert> c<ESC>"+p
 imap <S-Insert> <ESC>"+pa
-</pre>
+<p>
