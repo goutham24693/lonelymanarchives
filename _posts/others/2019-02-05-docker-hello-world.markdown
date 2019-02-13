@@ -80,3 +80,40 @@ Hello World
 <p>
 The <i>docker run</i> command executes the docker images built locally, if the specified image is not present, the Docker daemon will pull an image from local or public registry, if present. Docker images can be shared using public registry like Docker Hub. The parent image specified in the FROM label in the above example Dockerfile, is the official ubuntu image from pulled from public registry. Similarly developers can build their own images and push it to public reistry where other can use it by pulling them.
 </p>
+<h3>Creating a Registry:</h3>
+<p>
+A registry is a repository that contains docker images. Docker images can be push and pulled from a registry, tagging of docker images with a version is also possible in a registry. A registry in a local machine can be created as shown below.
+</p>
+{% highlight bash %}
+$ docker run -d -p 5000:5000 –restart=always –-name registry –regsitry:2
+{% endhighlight %}
+<p>
+A registry is created in local machine as a docker container and listens to image check-in in port 5000. Also note that the port 5000 of the host is mapped to the container port 5000. Any docker images pushed to localhost:5000 refers to container registry port 5000.
+</p>
+<h3>Pushing Docker image to registry:</h3>
+<p>
+Pushing a local docker image to registry, requires image to be tagged.
+</p>
+{% highlight bash %}
+$ docker images
+REPOSITORY  TAG    IMAGE ID     CREATED    SIZE
+hello       latest    9c50d78ad83f  21 hours ago        428MB
+{% endhighlight %}
+<p>
+After the image it tagged, it can be pushed to the registry.
+</p>
+{% highlight bash %}
+$ docker tag hello localhost:5000/myhello
+$ docker push localhost:5000/myhello
+The push refers to repository [localhost:5000/linuxip]
+e7f474c9b95c: Pushed
+7be23d134abd: Pushed
+.
+.
+.
+.
+latest: digest: sha256:e1f07447df6ca09c3feb3e0a57ec86748daac802801c0b206a86371e1aea45dd size: 3455
+{% endhighlight %}
+<p>
+When a Container orchestrator tool like Kubernetes is used, the images from registry can be easily pulled and deployed when comparing to local docker images.
+</p>
