@@ -36,6 +36,10 @@ categories: jekyll update
 </thead>
 <tbody>
 <tr>
+<td>WiFi</td>
+<td>Wireless Fidelity</td>
+</tr>
+<tr>
 <td>SSID</td>
 <td>Service Set ID</td>
 </tr>
@@ -53,11 +57,11 @@ categories: jekyll update
 </tr>
 </tbody>
 </table>
-<h3>WiFi Frequency, Band & Channel:</h3>
+<h3>What is WiFi?</h3>
 <p>
-WiFi works in certain unlicensed frequency ranges within radio spectrum. Wifi frequency band are globally agreed to be used to reception/transmission.
+WiFi is a wireless technology that lets devices connect to a network without a physical wire between the connecting device and the switch. WiFi uses radio waves to transfer data between connected devices. In the radio spectrum, WiFi operates at a particular frequency range called Bands. Most commonly used Wifi Frequency band are 2.4Ghz and 5Ghz.
 </p>
-<h3>2.4GHz Band Properties:</h3>
+<h3>2.4Ghz Band Properties:</h3>
 <p>
 <ul>
 <li>Speed – 450 or 600 Mbps </li>
@@ -69,11 +73,11 @@ WiFi works in certain unlicensed frequency ranges within radio spectrum. Wifi fr
 <li>Susceptibility to RF interference makes it less than ideal for industrial applications </li>
 </ul>
 </p>
-<h3>5GHz Band Properties:</h3>
+<h3>5Ghz Band Properties:</h3>
 <p>
 <ul>
 <li>Speed – 1300 Mbps</li>
-<li>Smaller wavelength compared to 2.4GHz</li>
+<li>Smaller wavelength compared to 2.4Ghz</li>
 <li>Shorter Range</li>
 <li>Faster than 2.4 GHz Band</li>
 <li>Can not penetrate through solid objects</li>
@@ -84,11 +88,11 @@ WiFi works in certain unlicensed frequency ranges within radio spectrum. Wifi fr
 </p>
 <h3>Single, Dual Band Routers:</h3>
 <p>
-Single Band Router can transmit a 2.4GHz signal, whereas a Dual Band Routers can transmit 2 signals, a 2.4Ghz signal and a 5GHz signal. The bandwidth and  maximum number of connected devices are higher in Dual Band. Dual band routers comes in simultaneous and selectable dual band variants. Tri Band Routers can broadcast two separate 5 Ghz and a single 2.5GHz signal into 3 different network.
+Single Band Router can transmit a 2.4Ghz signal, whereas a Dual Band Routers can transmit 2 signals, a 2.4Ghz signal and a 5Ghz signal. The bandwidth and  maximum number of connected devices are higher in Dual Band. Dual band routers comes in simultaneous and selectable dual band variants. Tri Band Routers can broadcast two separate 5 Ghz and a single 2.5Ghz signal into 3 different network.
 </p>
 <h3>Band Steering in WiFi:</h3>
 <p>
-Band Steering is a solution ensures that clients are connected to the best radio. Dual Band supported Gateway can transmit SSIDs in both 2.4GHz and 5GHz frequency band. Band Steering solution does upgrade steering ( from 2.4 GHz to 5 GHz) and downgrade steering (5 GHz to 2.4 GHz) which allows optimal utilization of both bands. The Steering of the Wireless clients are based on the following parameter,
+Band Steering is a solution ensures that clients are connected to the best radio. Dual Band supported Gateway can transmit SSIDs in both 2.4Ghz and 5Ghz frequency band. Band Steering solution does upgrade steering ( from 2.4 GHz to 5 GHz) and downgrade steering (5 GHz to 2.4 GHz) which allows optimal utilization of both bands. The Steering of the Wireless clients are based on the following parameter,
 </p>
 <ul>
 <li>    Wireless Client Capacity </li>
@@ -97,5 +101,5 @@ Band Steering is a solution ensures that clients are connected to the best radio
 <li>   Steering History</li>
 <li>   Wireless Client Activity (Inactive Client/ Active Client)</li>
 </ul>
-The purpose of Band Steering feature is to maintain Wireless Clients in band best suited to them. For instance, a 5GHz capable client would be maintained in faster & wider-channeled 5GHz band but if the Received Signal Strength is lesser than the threshold value, the Client is moved to a wider-range 2.4GHz band. 
+The purpose of Band Steering feature is to maintain Wireless Clients in band best suited to them. For instance, a 5Ghz capable client would be maintained in faster & wider-channeled 5Ghz band but if the Received Signal Strength is lesser than the threshold value, the Client is moved to a wider-range 2.4Ghz band. 
 </p>
