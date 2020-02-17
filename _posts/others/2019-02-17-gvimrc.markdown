@@ -1,0 +1,46 @@
+---
+layout: post-wrapper
+title:  "My gvimrc file"
+date:   2019-02-17 13:00:40 +0530
+categories: jekyll update
+---
+<p>
+<pre>
+" Goutham - Kindly back up file before modifications
+set hlsearch    " set highlight search
+set incsearch   " set incremental search
+set nu          " set numbers
+set paste       " set paste mode
+set showmatch   " show matching brackets
+
+"colorscheme evening
+color default
+set laststatus=2
+
+" Spacing
+set syntax=on
+set shiftwidth=4
+set tabstop=4
+set smartindent
+
+" press 'F' key to show function name 
+fun! ShowFuncName()
+  let lnum = line(".")
+  let col = col(".")
+  echohl ModeMsg
+  echo getline(search("^[^ \t#/]\\{2}.*[^:]\s*$", 'bW'))
+  echohl None
+  call search("\\%" . lnum . "l" . "\\%" . col . "c")
+endfun
+map f :call ShowFuncName() <CR>
+
+" Uncomment the following to have Vim jump to the last position when
+" reopening a file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+
+set guifont=Monospace\ 12
+source $VIMRUNTIME/mswin.vim
+behave mswin
+
