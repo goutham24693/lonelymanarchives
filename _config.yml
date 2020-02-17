@@ -17,7 +17,7 @@ title: Lonely Man Archives
 email: lonelymanarchives@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
     Just a lonely guy using a Linux distro.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/lonelymanarchives"
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: GouthamDurairaj
 github_username:  goutham24693
