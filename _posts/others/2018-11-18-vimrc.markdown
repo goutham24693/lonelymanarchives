@@ -23,11 +23,11 @@ set updatecount=100           " switch every 100 chars
 set complete=.,w,b,u,U,t,i,d  " do lots of scanning on tab completion
 set ttyfast                   " we have a fast terminal
 set noerrorbells              " No error bells please
-set nolist
 set lazyredraw " do not redraw while running macros
 set linespace=0 " don't insert any extra pixel lines betweens rows
-set list! " we do what to show tabs, to ensure we get them out of my files
-set listchars=tab:>-,trail:- " show tabs and trailing
+"set nolist
+"set list! " we do what to show tabs, to ensure we get them out of my files
+"set listchars=tab:>-,trail:- " show tabs and trailing
 set matchtime=5 " how many tenths of a second to blink matching brackets for
 set nostartofline " leave my cursor where it was
 set novisualbell " don't blink
@@ -50,7 +50,7 @@ set shiftwidth=4
 set tabstop=4
 set smartindent
 
-" press 'F' key to show function name 
+" press 'F' key to show function name
 fun! ShowFuncName()
   let lnum = line(".")
   let col = col(".")
@@ -59,13 +59,22 @@ fun! ShowFuncName()
   echohl None
   call search("\\%" . lnum . "l" . "\\%" . col . "c")
 endfun
-map f :call ShowFuncName() <CR>
+map f :call ShowFuncName()<CR>
+
+map <F3> <C-w>w<CR>
+map <F4> :tabp<CR>
+map <F5> :tabn<CR>
 
 " Uncomment the following to have Vim jump to the last position when
 " reopening a file
-if has("autocmd")
-  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+if &diff
+    color default
+else
+    if has("autocmd")
+        au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+    endif
 endif
 
-"map <F5> :set tags=/home/goutham/code/tags
+"map  :set tags=/home/goutham/code/tags
+
 <p>
