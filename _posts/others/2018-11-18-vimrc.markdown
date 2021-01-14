@@ -69,7 +69,10 @@ map &lt;F5&gt; :tabn&lt;CR&gt;
 " reopening a file
 if &diff
     color default
+    set t_Co=256
+    highlight DiffText   cterm=bold ctermfg=10 ctermbg=88 gui=none guifg=bg guibg=Red
 else
+    colorscheme elflord
     if has("autocmd")
         au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
     endif
