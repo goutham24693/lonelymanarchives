@@ -59,11 +59,11 @@ fun! ShowFuncName()
   echohl None
   call search("\\%" . lnum . "l" . "\\%" . col . "c")
 endfun
-map f :call ShowFuncName()<CR>
+map f :call ShowFuncName()&lt;CR&gt;
 
-map <F3> <C-w>w<CR>
-map <F4> :tabp<CR>
-map <F5> :tabn<CR>
+map &lt;F3&gt; &lt;C-w&gt;w&lt;CR&gt;
+map &lt;F4&gt; :tabp&lt;CR&gt;
+map &lt;F5&gt; :tabn&lt;CR&gt;
 
 " Uncomment the following to have Vim jump to the last position when
 " reopening a file
